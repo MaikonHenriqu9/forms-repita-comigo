@@ -1,16 +1,12 @@
+let dentro_intervalo = 0;
+let fora_intervalo = 0;
 
-let dentro = 0;
-let fora = 0;
 
-for (let i = 1; i <= 10; i++) {
-    let valor = parseInt(prompt(`digite o ${i} valor"`));
+for(let i = 1; i <= 10; i++){
+    let num = parseInt(prompt("Informe um valor"));
 
-    if (valor >= 24 && valor <= 42) {
-        dentro++;
-    } else {
-        fora++;
-    }
+    num >= 24 && num <= 42? dentro_intervalo++ : fora_intervalo++;
 }
 
-document.write(`Valores dentro do intervalo: ${dentro} <br>`);
-document.write(`Valores fora do intervalo: ${fora}`);
+document.write(`Dentro do intervalo: ${dentro_intervalo}`);
+document.write(`Fora do intervalo: ${fora_intervalo}`);

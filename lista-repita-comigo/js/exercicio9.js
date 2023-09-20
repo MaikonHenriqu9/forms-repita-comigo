@@ -1,3 +1,3 @@
-for (let num = 101; num <= 110; num++) {
-    document.write(num + "<br>");
+for(let n = 100; n < 111; n++){
+    document.write(n);
 }

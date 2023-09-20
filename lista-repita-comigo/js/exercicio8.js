@@ -1,7 +1,5 @@
-let num = parseFloat(prompt("Digite o numero "));
+let num = parseInt(prompt("Informe um valor"));
 
-for (let cont = num; cont >= 1; cont--) {
-
-    document.write(cont + "<br>")
-
+for(let i = 0; i <= num; i++){
+    document.write(i);
 }

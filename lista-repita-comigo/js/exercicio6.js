@@ -1,21 +1,22 @@
-let cont = 0
+let loop = true;
+let aprovados = 0;
 
-for (let resposta = "S"; resposta == "S";) {
+while(loop){
+    let n1 = parseInt(prompt("Informe a primeira nota "));
+    let n2 = parseInt(prompt("Informe a segunda nota"));
 
-    let nota1 = parseFloat(prompt("Digite nota 1"));
-    let nota2 = parseFloat(prompt("Digite nota 2"));
+    let media = (n1+n2)/2;
 
-    let media = 0;
-    media = (nota1 + nota2) / 2
-
-    if (media <= 9) {
-        alert(`Aprovado: ${media}`)
-        cont++
-    } else {
-        alert(`Reprovado: ${media}`)
+    if(media >= 9.5){
+        aprovados++;
     }
 
-    resposta = prompt("Deseja ver outra média? digite S ou N");
+    let resp = prompt("Deseja calcular a média de outro aluno? [Sim/Não]").toLowerCase();
+    
+    if( resp == "não"){
+        loop = false;
+    }
 }
 
-document.write("Numero de aprovados: " + cont)
+console.log(`Quantidade de alunos aprovados: ${aprovados}`);
+document.write(`Quantidade de alunos aprovados: ${aprovados}`);
